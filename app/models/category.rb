@@ -1,13 +1,6 @@
 class Category < ApplicationRecord
 	has_many :photos
-<<<<<<< HEAD
-	# Relationships
-  belongs_to :article
-=======
-	belongs_to :article
->>>>>>> recovery
+	has_many :articles
 
-	scope :active, 			 -> { where('active = ?', true) }
+  scope :active, 			 -> { where('active = ?', true) }
   scope :alphabetical, -> { order('name') }
-  
-end
